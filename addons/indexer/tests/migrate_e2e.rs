@@ -9,7 +9,7 @@
 //!   - SQLite: each test gets its own `tempfile::tempdir()`; no cross-test
 //!     collision.
 //!   - PostgreSQL: each test CREATEs a uniquely-named DB on
-//!     `127.0.0.1:5432` as role `mwaddip` (libpq picks up the password from
+//!     `127.0.0.1:5432` as role `wikialisa` (libpq picks up the password from
 //!     `~/.pgpass`). DROP runs in a synchronous `Drop` impl on a fresh
 //!     runtime — survives test-runner panics so we don't leak DBs.
 //!
@@ -74,7 +74,7 @@ impl PgTestDb {
                 "-h",
                 "127.0.0.1",
                 "-U",
-                "mwaddip",
+                "wikialisa",
                 "-d",
                 "postgres",
                 "-c",
@@ -87,7 +87,7 @@ impl PgTestDb {
             "CREATE DATABASE {name} failed: {}",
             String::from_utf8_lossy(&out.stderr)
         );
-        let url = format!("postgres://mwaddip@127.0.0.1:5432/{name}");
+        let url = format!("postgres://wikialisa@127.0.0.1:5432/{name}");
         Self { name, url }
     }
 }
@@ -103,7 +103,7 @@ impl Drop for PgTestDb {
                 "-h",
                 "127.0.0.1",
                 "-U",
-                "mwaddip",
+                "wikialisa",
                 "-d",
                 "postgres",
                 "-c",
@@ -119,7 +119,7 @@ impl Drop for PgTestDb {
                 "-h",
                 "127.0.0.1",
                 "-U",
-                "mwaddip",
+                "wikialisa",
                 "-d",
                 "postgres",
                 "-c",

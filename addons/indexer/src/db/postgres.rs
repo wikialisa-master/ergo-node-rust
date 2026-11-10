@@ -1334,7 +1334,7 @@ mod migration_backend_tests {
 
     /// Test-helper: a temporary, per-test PG database. Drops on `Drop`.
     ///
-    /// The libpq env (~/.pgpass) supplies password for the `mwaddip` role on
+    /// The libpq env (~/.pgpass) supplies password for the `wikialisa` role on
     /// the local 5432 instance, per the laptop's standing setup. Each test
     /// CREATEs a randomly-named DB, runs against it, then DROPs.
     ///
@@ -1364,12 +1364,12 @@ mod migration_backend_tests {
                 .expect("CREATE DATABASE");
             admin_pool.close().await;
 
-            let url = format!("postgres://mwaddip@127.0.0.1:5432/{name}");
+            let url = format!("postgres://wikialisa@127.0.0.1:5432/{name}");
             Self { name, url }
         }
 
         fn admin_url() -> String {
-            "postgres://mwaddip@127.0.0.1:5432/postgres".to_string()
+            "postgres://wikialisa@127.0.0.1:5432/postgres".to_string()
         }
 
         /// `test_migrate_<unix_nanos>_<pid>_<counter>` — unique per CREATE call

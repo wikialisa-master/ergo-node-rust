@@ -28,7 +28,7 @@ info:
     name: CC0-1.0
   contact:
     name: ergo-node-rust
-    url: https://github.com/mwaddip/ergo-node-rust
+    url: https://github.com/wikialisa/ergo-node-rust
 
 servers:
   - url: http://127.0.0.1:9053

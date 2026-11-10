@@ -49,7 +49,7 @@ replacement for the main node binary.
 \`\`\`
 
 See the project README at
-<https://github.com/mwaddip/ergo-node-rust/tree/main/addons/${dir}>
+<https://github.com/wikialisa/ergo-node-rust/tree/main/addons/${dir}>
 for configuration details.
 
 ## System install
@@ -147,7 +147,7 @@ file for a template.
 ## See also
 
 The `.deb` package automates the systemd install. See
-<https://github.com/mwaddip/ergo-node-rust/tree/main/addons/indexer>
+<https://github.com/wikialisa/ergo-node-rust/tree/main/addons/indexer>
 for project documentation.
 EOF
 

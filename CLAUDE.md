@@ -111,7 +111,7 @@ Single-repo, multi-session development:
 *Dates are the upstream repo's last push, checked 2026-08-13 via the GitHub API
 — not the crates.io release date, which is much older: `ergo-lib-v0.28.0` was
 published 2024-08-09. Every sigma-rust crate shares one repo and therefore one
-date. We consume them from `mwaddip/sigma-rust` pinned by rev, not from
+date. We consume them from `wikialisa/sigma-rust` pinned by rev, not from
 crates.io, so the version column is the last published release rather than what
 the build actually resolves.*
 
@@ -206,5 +206,5 @@ A local checkout for reference is at `~/projects/ergo-node-build` (v6.0.3 branch
 
 ## Related Projects
 
-- `~/projects/ergo-proxy-node` — where the P2P layer was originally written, now vendored here as `p2p/`. GitHub: `mwaddip/ergo-proxy`. The **relay** idea it was named for is abandoned; see "Dead / Superseded".
+- `~/projects/ergo-proxy-node` — where the P2P layer was originally written, now vendored here as `p2p/`. GitHub: `wikialisa/ergo-proxy`. The **relay** idea it was named for is abandoned; see "Dead / Superseded".
 - `~/projects/blockhost-ergo/ergo-relay` — BlockHost signing service and peer discovery

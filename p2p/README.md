@@ -1,6 +1,6 @@
 # enr-p2p
 
-P2P networking layer for [ergo-node-rust](https://github.com/mwaddip/ergo-node-rust), a ground-up Rust implementation of the Ergo blockchain full node.
+P2P networking layer for [ergo-node-rust](https://github.com/wikialisa/ergo-node-rust), a ground-up Rust implementation of the Ergo blockchain full node.
 
 ## What this does
 
@@ -55,7 +55,7 @@ Key discoveries:
 
 ## Building
 
-This crate is part of the `ergo-node-rust` workspace. See the [main repo](https://github.com/mwaddip/ergo-node-rust) for build instructions and documentation.
+This crate is part of the `ergo-node-rust` workspace. See the [main repo](https://github.com/wikialisa/ergo-node-rust) for build instructions and documentation.
 
 To run tests for this crate alone:
 
@@ -69,4 +69,4 @@ The crate reads its sections of the node's config: `[proxy]`, `[listen.ipv4]` / 
 
 ## License
 
-Same as the parent project. See the [main repo](https://github.com/mwaddip/ergo-node-rust) for details.
+Same as the parent project. See the [main repo](https://github.com/wikialisa/ergo-node-rust) for details.

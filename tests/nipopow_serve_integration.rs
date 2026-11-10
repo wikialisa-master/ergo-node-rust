@@ -316,7 +316,7 @@ async fn nipopow_serve_full_chain_round_trip() {
 /// Pre-fix sigma-rust `NipopowProof::has_valid_connections` was strict —
 /// it required immediate-predecessor connectivity and rejected these
 /// proofs with `Nipopow("invalid connections")`. The fix
-/// (`mwaddip/sigma-rust:fix/nipopow-prefix-connection-lookback`,
+/// (`wikialisa/sigma-rust:fix/nipopow-prefix-connection-lookback`,
 /// integrated as `1e3fe28` on `ergo-node-integration`) ports JVM's
 /// `useLastEpochs + 2` lookback window so the verifier accepts proofs
 /// where each entry connects to ANY of the up-to-10 immediately preceding

@@ -30,7 +30,7 @@ Three paths, all building from the same source.
 ### .deb package (recommended for systemd)
 
 Grab the matching `ergo-node-rust_<version>_<arch>.deb` from the
-[releases page](https://github.com/mwaddip/ergo-node-rust/releases) and
+[releases page](https://github.com/wikialisa/ergo-node-rust/releases) and
 install:
 
 ```sh
@@ -68,7 +68,7 @@ You can also start the binary with no setup at all; see
 Requires a stable Rust toolchain and the git submodules:
 
 ```sh
-git clone --recursive https://github.com/mwaddip/ergo-node-rust
+git clone --recursive https://github.com/wikialisa/ergo-node-rust
 cd ergo-node-rust
 cargo build --release --bin ergo-node-rust
 ./target/release/ergo-node-rust

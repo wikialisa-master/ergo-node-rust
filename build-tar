@@ -102,7 +102,7 @@ install. Grab the matching `ergo-node-rust_<version>_<arch>.deb`
 from the same release if you prefer a packaged install.
 
 For project documentation, see `README.md` in this bundle or
-<https://github.com/mwaddip/ergo-node-rust>.
+<https://github.com/wikialisa/ergo-node-rust>.
 EOF
 
 tar -czf "target/${PKG}.tar.gz" -C target "${PKG}"

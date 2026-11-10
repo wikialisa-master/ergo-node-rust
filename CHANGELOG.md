@@ -850,7 +850,7 @@ seconds when it never does.
 ## v0.7.4 — 2026-06-25
 
 Fix per-block state-root mismatch when mining-serve is enabled at tip
-([#15](https://github.com/mwaddip/ergo-node-rust/issues/15)).
+([#15](https://github.com/wikialisa/ergo-node-rust/issues/15)).
 
 - **`compute_proofs` no longer shares tree nodes with the main prover.**
   The mining proof path called `prover.generate_proof_for_operations()`,
@@ -979,7 +979,7 @@ voting divergences fixed, all JVM-verified:
 
 The conformance release. Building **donner** — the SANTA block-tier runner
 that drives this node's digest validation against externally-blessed vectors
-(github.com/mwaddip/santa-donner) — surfaced three consensus-grade gaps the
+(github.com/wikialisa/santa-donner) — surfaced three consensus-grade gaps the
 node's own test suite structurally could not see, because the suite verified
 the node's functions against themselves. All three are fixed here, alongside
 the rust-to-rust serve work, the candidate lifecycle arc, and UTXO-mode
@@ -1892,7 +1892,7 @@ were updated in-tree.
 ## v0.5.0 — 2026-05-14
 
 Crash recovery overhaul. The v0.4.x silent-loading window after an
-unclean shutdown ([#6](https://github.com/mwaddip/ergo-node-rust/issues/6))
+unclean shutdown ([#6](https://github.com/wikialisa/ergo-node-rust/issues/6))
 is closed: on the laptop's full-mainnet store, `kill -9` → REST API
 listening went from **7m54s** to **10.6s** (most of which is
 systemd's `RestartSec=10` cooldown — actual node startup work is
@@ -2005,7 +2005,7 @@ or validation changes.
 
 ### Fixed
 - **systemd unit logged to file while fail2ban watched journald**
-  ([#4](https://github.com/mwaddip/ergo-node-rust/issues/4)). The unit
+  ([#4](https://github.com/wikialisa/ergo-node-rust/issues/4)). The unit
   carried `StandardOutput=append:/var/log/ergo-node/ergo-node.log` and
   `StandardError=append:...` left over from the pre-fail2ban era; the
   v0.4.4 jail uses `backend=systemd` with
@@ -2030,25 +2030,25 @@ or validation changes.
 
   The fail2ban jail itself is unchanged.
 - **Packaged files owned by build-runner UID instead of root:root**
-  ([#2](https://github.com/mwaddip/ergo-node-rust/issues/2)). The
+  ([#2](https://github.com/wikialisa/ergo-node-rust/issues/2)). The
   v0.4.4 `.deb` shipped `/usr/bin/ergo-node-rust`, `/usr/bin/sharpen`,
   config files, and the systemd unit owned by the build host's
   numeric UID (1001 on the GitHub Actions runner), surfacing as
   `UNKNOWN:UNKNOWN` on hosts without that UID. `build-deb` now passes
   `--root-owner-group` to `dpkg-deb --build`.
 - **`preinst` warned about missing home directory**
-  ([#3](https://github.com/mwaddip/ergo-node-rust/issues/3)). The
+  ([#3](https://github.com/wikialisa/ergo-node-rust/issues/3)). The
   script ran `adduser --home /var/lib/ergo-node` before the directory
   existed, emitting `info: The home dir /var/lib/ergo-node you
   specified can't be accessed`. Reordered: `mkdir -p` runs first.
 - **Manpage example used stale `:9020` mainnet seed peers**
-  ([#5](https://github.com/mwaddip/ergo-node-rust/issues/5)). The
+  ([#5](https://github.com/wikialisa/ergo-node-rust/issues/5)). The
   `ergo-node-rust.conf(5)` minimal example referenced
   `213.239.193.208:9020` and `176.9.15.237:9020`, both currently
   unreachable on that port. Refreshed with a 4-peer `:9030` subset
   from the shipped `mainnet.toml`.
 - **Silent startup after unclean shutdown**
-  ([#6](https://github.com/mwaddip/ergo-node-rust/issues/6)). After a
+  ([#6](https://github.com/wikialisa/ergo-node-rust/issues/6)). After a
   power loss mid-sync, the daemon logged only the initial `node
   config` line for many minutes before binding the API/P2P ports —
   the header-chain restore (one redb read per stored header, walked

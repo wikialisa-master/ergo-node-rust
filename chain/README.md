@@ -1,6 +1,6 @@
 # enr-chain
 
-Header chain validation for [ergo-node-rust](https://github.com/mwaddip/ergo-node-rust) — the single authority on whether a chain of Ergo block headers is valid.
+Header chain validation for [ergo-node-rust](https://github.com/wikialisa/ergo-node-rust) — the single authority on whether a chain of Ergo block headers is valid.
 
 ## What it does
 
@@ -40,7 +40,7 @@ It depends on the [sigma-rust](https://github.com/ergoplatform/sigma-rust) ecosy
 
 ## Building and testing
 
-See the [main repository](https://github.com/mwaddip/ergo-node-rust) for workspace-level build instructions.
+See the [main repository](https://github.com/wikialisa/ergo-node-rust) for workspace-level build instructions.
 
 To build and test this crate in isolation:
 

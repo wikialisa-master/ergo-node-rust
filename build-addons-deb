@@ -38,7 +38,7 @@ Package: ergo-indexer
 Version: ${version}
 Architecture: ${ARCH}
 Depends: ergo-node-rust
-Maintainer: mwaddip
+Maintainer: wikialisa
 Description: Blockchain indexer addon for ergo-node-rust
  Rich query API over SQLite or PostgreSQL — box lookup by address,
  transaction history, token metadata, and network statistics. Runs
@@ -78,7 +78,7 @@ Package: ergo-fastsync
 Version: ${version}
 Architecture: ${ARCH}
 Depends: ergo-node-rust
-Maintainer: mwaddip
+Maintainer: wikialisa
 Description: Parallel bootstrap downloader for ergo-node-rust
  Downloads headers in parallel from multiple peers to accelerate the
  initial chain bootstrap. Auto-spawned by the main ergo-node-rust

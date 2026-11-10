@@ -68,17 +68,17 @@ Components communicate through traits — the P2P layer doesn't know what valida
 
 | Crate | Pre-absorb origin (archived) | Last submodule commit |
 |-------|------------------------------|------------------------|
-| `p2p/` | [mwaddip/enr-p2p](https://github.com/mwaddip/enr-p2p) | `e8185cc` |
-| `chain/` | [mwaddip/enr-chain](https://github.com/mwaddip/enr-chain) | `8e28fc0` |
-| `state/` | [mwaddip/enr-state](https://github.com/mwaddip/enr-state) | `9077d10` |
-| `store/` | [mwaddip/enr-store](https://github.com/mwaddip/enr-store) | `b997da5` |
-| `facts/` | [mwaddip/ergo-node-facts](https://github.com/mwaddip/ergo-node-facts) | `8a8ad45` |
+| `p2p/` | [wikialisa/enr-p2p](https://github.com/wikialisa/enr-p2p) | `e8185cc` |
+| `chain/` | [wikialisa/enr-chain](https://github.com/wikialisa/enr-chain) | `8e28fc0` |
+| `state/` | [wikialisa/enr-state](https://github.com/wikialisa/enr-state) | `9077d10` |
+| `store/` | [wikialisa/enr-store](https://github.com/wikialisa/enr-store) | `b997da5` |
+| `facts/` | [wikialisa/ergo-node-facts](https://github.com/wikialisa/ergo-node-facts) | `8a8ad45` |
 
 ## Development
 
 This project is built with a multi-session AI workflow: one main session coordinates interface contracts (in `facts/`) and integration; per-crate dispatched sessions implement against those contracts within their crate's directory boundary. Every cross-crate disagreement is resolved by updating the contract first, not by writing glue code — "fix the interface, never wrap the mismatch."
 
-Codebase-specific guidance — design principles, S.P.E.C.I.A.L. attention weights, common mistakes, protocol references — lives in [`agents/ergo-node-development/SKILL.md`](agents/ergo-node-development/SKILL.md). The dispatch mechanics (kitty window automation, executor identity, anti-recursion guards) live in [`mwaddip/claude-dbc`](https://github.com/mwaddip/claude-dbc) — install that skill pair (`dispatching-prompts` + `receiving-prompts`) to use the same workflow.
+Codebase-specific guidance — design principles, S.P.E.C.I.A.L. attention weights, common mistakes, protocol references — lives in [`agents/ergo-node-development/SKILL.md`](agents/ergo-node-development/SKILL.md). The dispatch mechanics (kitty window automation, executor identity, anti-recursion guards) live in [`wikialisa/claude-dbc`](https://github.com/wikialisa/claude-dbc) — install that skill pair (`dispatching-prompts` + `receiving-prompts`) to use the same workflow.
 
 ## Building
 
@@ -96,7 +96,7 @@ The binary is at `target/release/ergo-node-rust`.
 ./build-deb
 ```
 
-Pre-built `.deb` packages are available on the [releases page](https://github.com/mwaddip/ergo-node-rust/releases).
+Pre-built `.deb` packages are available on the [releases page](https://github.com/wikialisa/ergo-node-rust/releases).
 
 ### Addons
 
@@ -181,10 +181,10 @@ The node depends on two upstream Rust crates for consensus-critical primitives, 
 
 ### sigma-rust
 
-[`mwaddip/sigma-rust`](https://github.com/mwaddip/sigma-rust) — `ergo-chain-types`, `ergo-lib`, `ergo-nipopow`, `sigma-ser`
+[`wikialisa/sigma-rust`](https://github.com/wikialisa/sigma-rust) — `ergo-chain-types`, `ergo-lib`, `ergo-nipopow`, `sigma-ser`
 
 **45 open, 10 merged** against [ergoplatform/sigma-rust](https://github.com/ergoplatform/sigma-rust) —
-[live list](https://github.com/ergoplatform/sigma-rust/pulls?q=is%3Apr+author%3Amwaddip).
+[live list](https://github.com/ergoplatform/sigma-rust/pulls?q=is%3Apr+author%3Awikialisa).
 They are not enumerated here because the set turns over faster than a README
 does; the query above is always current.
 
@@ -201,10 +201,10 @@ nobody moves" — it is not a readiness signal.
 
 ### ergo_avltree_rust
 
-[`mwaddip/ergo_avltree_rust`](https://github.com/mwaddip/ergo_avltree_rust)
+[`wikialisa/ergo_avltree_rust`](https://github.com/wikialisa/ergo_avltree_rust)
 
 **5 open, 6 merged** against [ergoplatform/ergo_avltree_rust](https://github.com/ergoplatform/ergo_avltree_rust) —
-[live list](https://github.com/ergoplatform/ergo_avltree_rust/pulls?q=is%3Apr+author%3Amwaddip).
+[live list](https://github.com/ergoplatform/ergo_avltree_rust/pulls?q=is%3Apr+author%3Awikialisa).
 
 - [#27](https://github.com/ergoplatform/ergo_avltree_rust/pull/27) — persistent-prover support: proof cycle, rewind path, storage flush. Supersedes #11/#18/#19/#22 and carries the `restore_root` fix this node pins for
 - [#13](https://github.com/ergoplatform/ergo_avltree_rust/pull/13) — `contains_recursive` fail-safes on unresolvable `LabelOnly`

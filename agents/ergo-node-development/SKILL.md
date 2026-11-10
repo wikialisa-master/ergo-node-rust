@@ -90,7 +90,7 @@ Full profiles are in `facts/SPECIAL.md`. Key highlights:
 
 ## Multi-Session Workflow
 
-The dispatch mechanics — kitty automation, executor identity, anti-recursion guards — live in the `dispatching-prompts` and `receiving-prompts` skill pair at `github.com/mwaddip/claude-dbc`. Install both before working on this codebase if you intend to dispatch.
+The dispatch mechanics — kitty automation, executor identity, anti-recursion guards — live in the `dispatching-prompts` and `receiving-prompts` skill pair at `github.com/wikialisa/claude-dbc`. Install both before working on this codebase if you intend to dispatch.
 
 ### Role Detection (read this first)
 

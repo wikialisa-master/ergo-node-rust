@@ -1,10 +1,10 @@
 # enr-state
 
-Persistent, versioned, crash-safe AVL+ authenticated dictionary over [redb](https://github.com/cberner/redb). This crate implements the `VersionedAVLStorage` trait from [`ergo_avltree_rust`](https://github.com/mwaddip/ergo_avltree_rust), providing the storage backend that `PersistentBatchAVLProver` needs to persist an AVL+ tree to disk with rollback support.
+Persistent, versioned, crash-safe AVL+ authenticated dictionary over [redb](https://github.com/cberner/redb). This crate implements the `VersionedAVLStorage` trait from [`ergo_avltree_rust`](https://github.com/wikialisa/ergo_avltree_rust), providing the storage backend that `PersistentBatchAVLProver` needs to persist an AVL+ tree to disk with rollback support.
 
 ## Role in ergo-node-rust
 
-This is the **UTXO state persistence layer** for [ergo-node-rust](https://github.com/mwaddip/ergo-node-rust), a ground-up Rust implementation of the Ergo blockchain full node. It sits between the AVL+ tree algorithm (provided by `ergo_avltree_rust`) and the block validation layer, which applies state transitions and verifies authenticated state roots.
+This is the **UTXO state persistence layer** for [ergo-node-rust](https://github.com/wikialisa/ergo-node-rust), a ground-up Rust implementation of the Ergo blockchain full node. It sits between the AVL+ tree algorithm (provided by `ergo_avltree_rust`) and the block validation layer, which applies state transitions and verifies authenticated state roots.
 
 ```
 Block validation (ergo-validation)
@@ -28,7 +28,7 @@ The crate is **Ergo-agnostic** — it stores arbitrary `(ADKey, ADValue)` byte p
 
 ## Building
 
-See the [ergo-node-rust](https://github.com/mwaddip/ergo-node-rust) repository for build instructions and project documentation.
+See the [ergo-node-rust](https://github.com/wikialisa/ergo-node-rust) repository for build instructions and project documentation.
 
 ## License
 

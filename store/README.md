@@ -1,6 +1,6 @@
 # enr-store
 
-Persistent modifier storage for [ergo-node-rust](https://github.com/mwaddip/ergo-node-rust). Stores block headers, block sections, and other modifiers as pre-validated, pre-serialized bytes in a [redb](https://github.com/cberner/redb) embedded database.
+Persistent modifier storage for [ergo-node-rust](https://github.com/wikialisa/ergo-node-rust). Stores block headers, block sections, and other modifiers as pre-validated, pre-serialized bytes in a [redb](https://github.com/cberner/redb) embedded database.
 
 ## What it does
 
@@ -48,7 +48,7 @@ For non-header modifiers (block sections, extensions, etc.), `put` / `put_batch`
 
 ## Building and testing
 
-See the [main ergo-node-rust repo](https://github.com/mwaddip/ergo-node-rust) for build instructions and project documentation.
+See the [main ergo-node-rust repo](https://github.com/wikialisa/ergo-node-rust) for build instructions and project documentation.
 
 ```
 cargo test

@@ -500,7 +500,7 @@ reads). All call sites (`AVLTree::new()`, the `resolve()` method) work
 identically — `(self.resolver)(digest)` calls both `fn` pointers and
 `Arc<dyn Fn>` the same way.
 
-Fork: `github.com/mwaddip/ergo_avltree_rust`. Change is verified — all 22
+Fork: `github.com/wikialisa/ergo_avltree_rust`. Change is verified — all 22
 tests pass.
 
 With this fix, `RedbAVLStorage::resolver()` returns a closure that captures

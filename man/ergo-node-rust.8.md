@@ -231,5 +231,5 @@ testnet peer behavior is noisier than mainnet by design.
 **fail2ban-client**(1), **journalctl**(1)
 
 The project repository is at
-<https://github.com/mwaddip/ergo-node-rust>. The JVM reference node is
+<https://github.com/wikialisa/ergo-node-rust>. The JVM reference node is
 at <https://github.com/ergoplatform/ergo>.

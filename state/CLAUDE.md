@@ -32,7 +32,7 @@ This crate does NOT own:
 - ErgoScript evaluation — that's `ergo-validation` via `ergo-lib`
 - Transaction validation rules — that's `ergo-validation`
 - Block validation — that's `ergo-validation`
-- The AVL algorithm itself — that's the `ergo_avltree_rust` crate (forked at `mwaddip/ergo_avltree_rust`)
+- The AVL algorithm itself — that's the `ergo_avltree_rust` crate (forked at `wikialisa/ergo_avltree_rust`)
 - Network I/O — that's P2P
 
 ## Dependencies
